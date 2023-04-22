@@ -26,8 +26,8 @@ const handleClearClick = () => {
    }
  };
 
- const squareClick = (number) => {
-   setResult(number ** 2);
+ const squareClick = () => {
+   setResult(prevResult => prevResult ** 2);
  };
 
  const handleDeleteClick = () => {
@@ -174,7 +174,7 @@ const handleClearClick = () => {
             <Button
               name="x²"
               colorScheme={colorMode === "light" ? "yellow" : "blue"}
-              onClick={() => squareClick()}
+              onClick={squareClick}
             >
               x²
             </Button>
